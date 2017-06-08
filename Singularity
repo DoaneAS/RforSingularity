@@ -1,7 +1,6 @@
 Bootstrap: docker
 From: bioconductor/release_metabolomics2:latest
 
-
 %setup
     mkdir /scratchLocal
     mkdir /pbtech_mounts
