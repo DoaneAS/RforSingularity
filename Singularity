@@ -2,12 +2,14 @@ Bootstrap: docker
 From: bioconductor/release_metabolomics2:latest
 
 %setup
-    mkdir /scratchLocal
-    mkdir /pbtech_mounts
-    mkdir /pbtech_mounts/softlib001
-    mkdir /pbtech_mounts/oelab_store003
-    mkdir /athena
-    mkdir /cluster001
+mkdir /scratchLocal
+mkdir /pbtech_mounts
+mkdir /pbtech_mounts/softlib001
+mkdir /pbtech_mounts/oelab_store003
+mkdir /athena
+mkdir /cluster001
+
+
 
 %post
     mkdir -p /athena
@@ -41,3 +43,5 @@ From: bioconductor/release_metabolomics2:latest
     apt-get install -y libopenblas-dev libcurl4-openssl-dev libopenmpi-dev openmpi-bin openmpi-common openmpi-doc openssh-client openssh-server libssh-dev libcairo2-dev wget vim git libssl-dev libcurl4-openssl-dev nano git cmake  gfortran g++ curl wget python autoconf bzip2 libtool libtool-bin python-pip python-dev
     echo "All Set!"
 
+%environment
+export R_LIBS=/home/asd2007/singularity/mylibrary
