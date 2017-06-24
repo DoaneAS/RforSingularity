@@ -33,6 +33,7 @@ From: bioconductor/release_metabolomics2:latest
     apt-get update
     apt-get install -y apt-transport-https build-essential cmake curl libsm6 libxrender1 libfontconfig1 wget vim git unzip python-setuptools ruby bc
     apt-get install -y libcairo2-dev libxt-dev
+    apt-get install r-base r-recommended r-base-dev
     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 51716619E084DAB9
     echo "deb https://cloud.r-project.org/bin/linux/ubuntu trusty/" >> /etc/apt/sources.list
     apt-get update
@@ -43,4 +44,4 @@ From: bioconductor/release_metabolomics2:latest
     echo "All Set!"
 
 %environment
-export R_LIBS=/home/asd2007/singularity/mylibrary
+export R_LIBS_USER=/home/asd2007/singularity/mylibrary
