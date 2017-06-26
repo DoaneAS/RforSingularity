@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: bioconductor/release_metabolomics2:latest
+From: bioconductor/release_core2:latest
 
 %setup
     mkdir /scratchLocal
@@ -32,8 +32,8 @@ From: bioconductor/release_metabolomics2:latest
     chmod 777 /Software
     apt-get update
     apt-get install -y apt-transport-https build-essential cmake curl libsm6 libxrender1 libfontconfig1 wget vim git unzip python-setuptools ruby bc
-    apt-get install -y libcairo2-dev libxt-dev
-    apt-get install r-base r-recommended r-base-dev
+    apt-get install -y libcairo2-dev libxt-dev tcl8.5-dev
+    apt-get install -y r-base r-recommended r-base-dev
     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 51716619E084DAB9
     echo "deb https://cloud.r-project.org/bin/linux/ubuntu trusty/" >> /etc/apt/sources.list
     apt-get update
@@ -44,4 +44,4 @@ From: bioconductor/release_metabolomics2:latest
     echo "All Set!"
 
 %environment
-export R_LIBS_USER=/home/asd2007/singularity/mylibrary
+export R_LIBS_USER="/athena/elementolab/scratch/asd2007/singularity/mylibrary"
