@@ -9,7 +9,6 @@ From: rocker/ropensci:latest
     mkdir /athena
     mkdir /cluster001
 
-
 %post
     mkdir -p /athena
     mkdir -p /scratchLocal
