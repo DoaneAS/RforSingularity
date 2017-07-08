@@ -41,6 +41,9 @@ From: bioconductor/release_core2:latest
     apt-get install -y time
     # Install R, Python, misc. utilities
     apt-get install -y libopenblas-dev libcurl4-openssl-dev libopenmpi-dev openmpi-bin openmpi-common openmpi-doc openssh-client openssh-server libssh-dev libcairo2-dev wget vim git libssl-dev libcurl4-openssl-dev nano git cmake  gfortran g++ curl wget python autoconf bzip2 libtool libtool-bin python-pip python-dev
+    apt-get install -y gdebi-core
+    wget https://download2.rstudio.org/rstudio-server-1.0.143-amd64.deb
+    gdebi rstudio-server-1.0.143-amd64.deb
     echo "All Set!"
 
 %environment
