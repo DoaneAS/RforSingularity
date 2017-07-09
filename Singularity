@@ -9,7 +9,6 @@ From: bioconductor/release_core2:latest
     mkdir /athena
     mkdir /cluster001
 
-
 %post
     mkdir -p /athena
     mkdir -p /scratchLocal
